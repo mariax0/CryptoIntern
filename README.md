@@ -53,8 +53,8 @@ It has a server `CryptoIntern` and a database named `cryptointern_db`.
 | ---------------- | -------------- | ---------------------------------------------- |
 | transaction_id   | VARCHAR(50)    | Unique identifier of a transaction             |
 | user_id          | VARCHAR(20)    | Platform user identifier                       |
-| first_name       | VARCHAR(255)   | Customer first name (optional for privacy)     |
-| last_name        | VARCHAR(255)   | Customer last name (optional for privacy)      |
+| first_name       | VARCHAR(200)   | Customer first name (optional for privacy)     |
+| last_name        | VARCHAR(200)   | Customer last name (optional for privacy)      |
 | wallet_address   | VARCHAR(100)   | Crypto wallet address                          |
 | crypto_symbol    | VARCHAR(10)    | Cryptocurrency identifier (e.g. BTC, ETH)      |
 | crypto_to        | VARCHAR(10)    | Target cryptocurrency or fiat (e.g. USDT, USD) |
@@ -68,16 +68,16 @@ It has a server `CryptoIntern` and a database named `cryptointern_db`.
 
 `coinranking_data`
 
-| Column Name           | Data Type      | Description                                  |
-| --------------------- | -------------- | -------------------------------------------- |
-| crypto_id             | VARCHAR(50)    | Unique Coinranking ID for the cryptocurrency |
-| crypto_symbol         | VARCHAR(10)    | Cryptocurrency symbol (e.g. BTC, ETH)        |
-| crypto_name           | VARCHAR(50)    | Cryptocurrency name (e.g. Bitcoin)           |
-| price_usd             | DECIMAL(18, 2) | Current price in USD                         |
-| volume_24h            | DECIMAL(18, 2) | 24-hour trading volume in USD                |
-| market_cap            | DECIMAL(18, 2) | Market capitalization in USD                 |
-| time_last_update_unix | TIMESTAMP      | Timestamp of the last data update            |
-| time_next_update_unix | TIMESTAMP      | Timestamp for the next expected update       |
+| Column Name      | Data Type      | Description                                  |
+| ---------------- | -------------- | -------------------------------------------- |
+| crypto_id        | VARCHAR(50)    | Unique Coinranking ID for the cryptocurrency |
+| crypto_symbol    | VARCHAR(10)    | Cryptocurrency symbol (e.g. BTC, ETH)        |
+| crypto_name      | VARCHAR(50)    | Cryptocurrency name (e.g. Bitcoin)           |
+| price_usd        | DECIMAL(18, 2) | Current price in USD                         |
+| volume_24h       | DECIMAL(18, 2) | 24-hour trading volume in USD                |
+| market_cap       | DECIMAL(18, 2) | Market capitalization in USD                 |
+| time_last_update | TIMESTAMP      | Timestamp of the last data update            |
+| time_next_update | TIMESTAMP      | Timestamp for the next expected update       |
 
 ## Architecture of Data Warehousing
 
