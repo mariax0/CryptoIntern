@@ -1,5 +1,5 @@
-CREATE TABLE IF NOT EXISTS raw.cryptointern_data (
-    transaction_id VARCHAR(50),
+CREATE TABLE IF NOT EXISTS staging.stg_cryptointern_data (
+    transaction_id	VARCHAR(50),
     user_id	VARCHAR(20),
     first_name VARCHAR(200),
     last_name VARCHAR(200),
